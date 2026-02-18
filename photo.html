@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <link rel="stylesheet" href="styles.css" />
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head> 
+<body><nav class="navbar">
+    <h1 class="main-title">The secrets of the soul </h1>
+<p class="sub-title">  The Isolation Gallery: Old  Personal Photos</p>
+
+   
+  <ul>
+    
+    <li><a href="index.html" class=""> Home </a></li>
+    <li><a href="music.html" class="">Music </a></li>
+    <li><a href="photo.html" class="nav-item active" >Photo </a></li>
+    <li><a href="notes.html" class="nav-item ">notebook </a></li>
+    <li><a href="libray.html" class="nav-item ">My library </a></li>
+    <li><a href="leave-a-message.html" class="nav-item "> Leave a message </a></li>
+  </ul>
+</nav>
+<hr />
+
+
+
+<div class="gallery">
+    <div class="frame locked" onclick="unlockGallery()">
+        <div class="rope"></div>
+        <div class="photo">
+            <img src="photo/p19.jpg" alt="Photo 19">
+            <div class="lock-overlay"><span class="lock-icon">🔒</span></div>
+        </div>
+    </div>
+
+    <div class="frame low locked" onclick="unlockGallery()">
+        <div class="rope"></div>
+        <div class="photo">
+            <img src="photo/p20.jpg" alt="Photo 20">
+            <div class="lock-overlay"><span class="lock-icon">🔒</span></div>
+        </div>
+    </div>
+
+    <div class="frame locked" onclick="unlockGallery()">
+        <div class="rope"></div>
+        <div class="photo">
+            <img src="photo/p21.jpg" alt="Photo 21">
+            <div class="lock-overlay"><span class="lock-icon">🔒</span></div>
+        </div>
+    </div>
+</div>
+
+
+
+<div id="passwordModal" class="password-modal">
+    <div class="modal-content">
+        <span class="close-x" onclick="closeModal()">&times;</span>
+        
+        <span class="lock-icon-big">🔒</span>
+        <h3>These images are protected</h3>
+        <p>Enter your password to continue</p>
+        <input type="password" id="passInput" placeholder="password">
+        <div class="modal-buttons">
+            <button onclick="checkPassword()" class="btn-unlock">to open</button>
+        </div>
+    </div>
+</div>
+
+ <div class="new-gallery-container">
+    <div class="grid-card"><img src="photo/p1.jpg"></div>
+    <div class="grid-card"><img src="photo/p2.jpg"></div>
+    <div class="grid-card"><img src="photo/p3.jpg"></div>
+    <div class="grid-card"><img src="photo/p4.jpg"></div>
+    <div class="grid-card"><img src="photo/p5.jpg"></div>
+    <div class="grid-card"><img src="photo/p6.jpg"></div>
+    <div class="grid-card"><img src="photo/p7.jpg"></div>
+    <div class="grid-card"><img src="photo/p8.jpg"></div>
+    <div class="grid-card"><img src="photo/p9.jpg"></div>
+    <div class="grid-card"><img src="photo/p10.jpg"></div>
+    <div class="grid-card"><img src="photo/p11.jpg"></div>
+    <div class="grid-card"><img src="photo/p12.jpg"></div>
+    <div class="grid-card"><img src="photo/p13.jpg"></div>
+    <div class="grid-card"><img src="photo/p14.jpg"></div>
+    <div class="grid-card"><img src="photo/p15.jpg"></div>
+    <div class="grid-card"><img src="photo/p16.jpg"></div>
+    <div class="grid-card"><img src="photo/p17.jpg"></div>
+    <div class="grid-card"><img src="photo/p18.gif"></div> </div>
+  
+<div class="background-particles"></div>
+
+
+
+
+
+
+<script src="script.js"></script>
+</body>
+</html>

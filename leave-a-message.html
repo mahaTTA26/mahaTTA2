@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <link rel="stylesheet" href="styles.css" />
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+
+
+
+<body><nav class="navbar">
+    <h1 class="main-title"> leave a message </h1>
+<p class="sub-title">  </p>
+
+   
+  <ul>
+    <li><a href="index.html" class=""> Home </a></li>
+    <li><a href="music.html" class=" nav-item ">Music </a></li>
+    <li><a href="photo.html" class="nav-item ">Photo </a></li>
+    <li><a href="notes.html" class="nav-item ">notebook </a></li>
+    <li><a href="libray.html" class="nav-item ">My library </a></li>
+    <li><a href="leave-a-message.html" class="nav-item active"> Leave a message </a></li>
+  </ul>
+</nav>
+<hr />
+
+
+
+
+
+<div class="message-container">
+    <form id="contact-form">
+        <input type="text" name="name" placeholder="Your Name" required class="glass-input">
+        
+        <input type="email" name="email" placeholder="Your Email" required class="glass-input">
+        
+        <textarea name="message" placeholder="Type your message here..." required class="glass-input"></textarea>
+        
+        <button type="submit" id="send-btn">Send Message</button>
+    </form>
+</div>
+
+
+
+
+
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+
+<script type="text/javascript">
+(function() {
+    // 2. تفعيل المفتاح العام (Public Key)
+    emailjs.init("0u2FAs_lvWEsISk4y"); 
+})();
+
+// 3. دالة إرسال النموذج
+document.getElementById('contact-form').addEventListener('submit', function(event) {
+    event.preventDefault();
+
+    const btn = document.querySelector('button');
+    btn.innerText = 'Sending...';
+
+    // استخدام المعرفات الخاصة بك من الصور السابقة
+    emailjs.sendForm('service_978z1mh', 'template_r2ee4xh', this)
+        .then(function() {
+            alert('تم إرسال رسالتك بنجاح! شكراً لك');
+            btn.innerText = 'Send';
+            document.getElementById('contact-form').reset(); 
+        }, function(error) { // تأكد من الفاصلة هنا
+            alert('فشل الإرسال.. تأكد من الأكواد وحاول مرة أخرى');
+            console.log('FAILED...', error);
+            btn.innerText = 'Send';
+        });
+});
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script src="script.js"></script>
+
+<div class="background-particles"></div>
+
+    
+</body>
+</html>
